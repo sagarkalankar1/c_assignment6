@@ -13,20 +13,9 @@ pipelineJob('c_child-my-pipeline-job-assgn6') {
                         }
                         stage('Build') {
                             steps {
-                                // Add build steps here
-                                echo 'Building...'
-                            }
-                        }
-                        stage('Test') {
-                            steps {
-                                // Add test steps here
-                                echo 'Testing...'
-                            }
-                        }
-                        stage('Deploy') {
-                            steps {
-                                // Add deployment steps here
-                                echo 'Deploying...'
+                                echo "Building the checked-out project";
+                                sh 'chmod +x Build.sh'
+                                sh './Build.sh'
                             }
                         }
                     }
