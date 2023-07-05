@@ -8,8 +8,10 @@ job('c_child_freestyle') {
     }
   }
   steps {
-    echo 'Building the checked-out project'
-    sh 'chmod +x Build.sh'
-    sh './Build.sh'
+    script {
+      echo 'Building the checked-out project'
+      sh 'chmod +x Build.sh'
+      sh './Build.sh'
+    }
   }
 }
