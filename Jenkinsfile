@@ -1,17 +1,17 @@
-job('c_child_freestyle') {
-  scm {
-    git {
-      remote {
-        branch('main')
-        url('https://github.com/sagarkalankar1/b_pipeline_github.git')
-      }
+job('d_child_Assignment1') {
+    scm {
+        git {
+            branch('main')
+            remote {
+                url('https://github.com/Rahul-Palande11/SRE-PATH.git')
+            }
+        }
     }
-  }
-  steps {
-    script {
-      echo 'Building the checked-out project'
-      sh 'chmod +x Build.sh'
-      sh './Build.sh'
+
+    steps {
+        shell '''
+            javac Hello.java
+            java Hello
+        '''
     }
-  }
 }
