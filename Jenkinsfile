@@ -3,7 +3,7 @@ job('d_child_Assignment1') {
         git {
             branch('main')
             remote {
-                url('https://github.com/Rahul-Palande11/SRE-PATH.git')
+                url('https://github.com/sagarkalankar1/c_Assignment6_jobfile.git')
             }
         }
     }
